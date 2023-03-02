@@ -1,5 +1,3 @@
-package Calculator;
-
 public class Calculator {
     public static double SquareRoot(double number) {
         if(number < 0) {
