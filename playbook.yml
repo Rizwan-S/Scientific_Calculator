@@ -1,6 +1,14 @@
 - name: Pull and run docker image
   hosts: localhost
   tasks:
+    - name: Ensure the locale exists
+      locale_gen:
+        name: en_IN.UTF-8
+        state: present
+
+    - name: set as default locale
+      command: localectl set-locale LANG=en_IN.UTF-8 LC_ALL=en_IN.UTF-8
+
     - name: pull docker image
       shell: docker pull rizwans21/calculator:latest
       
