@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Github Pull') {
+        stage('Github pull') {
             steps {
                 git branch: 'main', credentialsId: 'GitHub_credentials', url: 'https://github.com/Rizwan-S/Scientific_Calculator.git'
             }
@@ -21,7 +21,7 @@ pipeline {
                 }
             }
         }
-        stage('Docker push img') {
+        stage('Docker push image') {
             steps {
                 script{
                     docker.withRegistry('','DockerHub_Credentials'){
