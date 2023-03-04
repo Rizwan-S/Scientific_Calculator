@@ -1,0 +1,8 @@
+- name: Pull and run docker image
+  hosts: localhost
+  tasks:
+    - name: pull docker image
+      shell: docker pull rizwans21/calculator:latest
+      
+    - name: run container
+      shell: docker run -i -t --name calculator -d rizwans21/calculator
