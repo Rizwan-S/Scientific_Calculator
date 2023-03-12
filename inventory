@@ -1,2 +1,2 @@
 [ansible_nodes]
-node1 ansible_host=172.16.141.128 ansible_connection=ssh ansible_user=ans_usr ansible_sudo_pass=ansuser
+172.16.141.128 ansible_user=rizwan
