@@ -23,7 +23,7 @@ public class Main {
             System.out.print("Enter operation number: ");
 
             int operation;
-            double number1 = 0, number2 = 0;
+            double number1 = 0, number2 = 0, answer;
             try {
                 operation = sc.nextInt();
             } catch (InputMismatchException e) {
@@ -54,9 +54,31 @@ public class Main {
 
             switch (operation) {
                 case 1:
-                    double answer = cal.SquareRoot(number1);
+                    answer = cal.SquareRoot(number1);
                     if (answer != -1)
                         System.out.println("Answer: " + answer);
+                    break;
+                case 2:
+                    answer = cal.Factorial(number1);
+                    if(answer != -1)
+                        System.out.println("Answer: " + answer);
+                    break;
+                case 3:
+                    answer = cal.NaturalLog(number1);
+                    if(answer != -1)
+                        System.out.println("Answer: " + answer);
+                    break;
+                case 4:
+                    System.out.print("Enter power : ");
+                    number2 = sc.nextDouble();
+
+                    if(number2 < 0) {
+                        System.out.println("Invalid input: Negative power");
+                        return;
+                    } else {
+                        answer = cal.Power(number1, number2);
+                        System.out.println("Answer: " + answer);
+                    }
                     break;
                 default:
                     System.out.println("Not a valid option");
