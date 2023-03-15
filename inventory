@@ -1,2 +1,2 @@
 [ansible_nodes]
-172.16.141.128 ansible_user=rizwan
+localhost ansible_user=rizwan
