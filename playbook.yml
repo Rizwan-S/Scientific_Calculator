@@ -1,6 +1,10 @@
 - name: Pull and run docker image
   hosts: localhost
   tasks:
+    - name: Start docker service
+      service:
+        name: docker
+        state: started
 
     - name: pull docker image
       shell: docker pull rizwans21/calculator:latest
